@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./telaLogin.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+  <script src="./telaLogin.js" defer></script>
+  <link rel="stylesheet" href="./telaLogin.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#163858',
+            retangulo1: '#344D64',
+            retangulo2: '#2E3843'
+          }
+
+        }
+      },
+      fontFamily: {
+        'fontee': ['Jomhuria', 'serif']
+      }
+    }
+  </script>
+  <title>Seja Bem-Vindo</title>
+</head>
+
+<body>
+
+  <!-- Fundo degrade do site -->
+  <div class="bg-gradient-to-b from-clifford w-[100%] h-[919px] z-[-1] fixed"></div>
+
+  <header>
+
+    <!-- Logo Acme Filmes -->
+    <div class="fixed left-[718px] top-[20px] ">
+      <img src="../img/Titulo.png" alt="Acme Filmes">
+    </div>
+
+    <!-- Frase acesse sua conta -->
+    <div class="fixed left-[45%] top-[244px]">
+      <img src="../img/frase.png" alt="">
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Desing da caixa de login onde guarda os input´s -->
+
+    <div class="bg-retangulo1 w-[550px] h-[400px] rounded-[18px] top-[280px] left-[700px] drop-shadow-md fixed"></div>
+    <div class="bg-retangulo2 w-[531px] h-[380px] rounded-[18px] top-[290px] left-[709px] drop-shadow-md fixed"></div>
+    <div class="bg-white      w-[515px] h-[358px] rounded-[8px] top-[301px] left-[718px] drop-shadow-md fixed">
+
+      <!-- input e-mail -->
+    <div class="mb-4  gap items-center">
+      <label for="email" class="block pl-[52px] text-gray-700 font-bold text-justify mb-2 mt-[74px]">Email</label>
+      <input type="email" id="email" name="email" class="w-[400px] px-3 py-2 border rounded-md text-gray-700
+       focus:outline-none focus:border-indigo-500 ml-[50px]" placeholder="Digite seu email" required>
+    </div>
+
+    <!-- input da senha -->
+    <div class="mb-4">
+      <label for="password" class="block pl-[52px] text-gray-700  font-bold mb-2  text-justify ">Senha</label>
+      <input type="password" id="password" name="password" class="w-[400px] px-3 py-2 border ml-[50px] rounded-md
+      text-gray-700 focus:outline-none focus:border-indigo-500" placeholder="Digite sua senha" required>
+
+      <!-- link do esqueceu sua senha (sem funcionamento ainda) -->
+      <a href="#" class="block text-right text-xs text-indigo-600 mt-1 mr-[60px]">Esqueceu sua senha?</a>
+    
+    </div>
+
+    <!-- botao de entrar pro cms -->
+    <div class="mb-4">
+      <button type="submit" class="w-[300px] bg-clifford text-white py-2 px-4 rounded-md 
+      hover:bg-retangulo1 focus:outline-none focus:bg-retangulo2 ml-[100px]">
+       <a href="../telaCms/telaCms.html">Entrar</a> 
+      </button>
+
+    </div>
+
+
+   
+  </main>
+
+  <footer></footer>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <script type="module" src="../js/menu.js" defer></script>
+    <link rel="stylesheet" href="../css/menu.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#15324D',
+                    },
+                    spacing: {
+                        imgg: '450px',
+                        capa: '230px',
+                        card: "200px",
+                        body: '100vh'
+
+                    },
+                    zIndex: {
+                        img: '-1',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Dashboard</title>
+</head>
+
+<!-- Fundo degrade do site -->
+
+<body class="bg-gradient-to-t from-clifford w-[100%] h-screen bg-no-repeat z-[-1] ">
+
+    <header class="">
+
+        <!-- retangulo style -->
+        <div class="fixed top-[50px] left-[90px] w-[90%] h-[100px] bg-[#344D64] rounded-[20px] drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"></div>
+        <div class="fixed top-[90px] left-[126px] w-[86%] h-[100px] bg-[#2E3843] rounded-[20px] drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"></div>
+        <div class="fixed top-[130px] left-[180px] w-[80%] h-[100px] bg-white rounded-[20px] drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] flex justify-center">
+
+            <!-- topicos -->
+            <div class="flex align-center pt-[50px] ">
+                <h1 class="text-black font-sans font-bold text-xl pr-[200px]" >ID</h1>
+                <div class="text-black font-sans font-bold  text-xl pr-[280px]">Diretor</div>
+                <div class="text-black font-sans font-bold  text-xl pr-[50px]">Deletar</div>
+                <div class="text-blackfont-sans font-bold text-xl">Atualizar</div>
+            </div>
+
+
+        <!-- caixa de menu que guarda os outros crud´s -->
+        <div class="menu">
+            <ul> ☰
+                <li><span class="material-symbols-outlined"> <a href="./telaCms.html"> Filme</a></span></li>
+                <li><span class="material-symbols-outlined"> <a href="./genero.html"> Gênero</a></span></li>
+                <li><span class="material-symbols-outlined"> <a href="./ator.html"> Ator</a> </span></li>
+                <li><span class="material-symbols-outlined"> <a href="./diretor.html"> Diretor</a></span></li>
+                <li><span class="material-symbols-outlined"> <a href="./classificacao.html"> Classificação</a></span></li>
+            </ul>
+            </div>
+
+             <!-- botao adicionar Diretor -->
+             <button class="fixed left-[90%] top-[20px] bg-white p-3 text-center rounded-[18px] flex items-center font-bold transform hover:scale-105 duration-300" id="add">
+                <a class=' bx bx-plus font-bold text-center' href="../telaCadastrar/cadastroDiretor.html" > ADD NEW</a>
+            </button>
+        </div>
+        
+
+    </header>
+
+    <!-- overflow do get listar Diretor -->
+    <main class="teste flex overflow-hidden justify-center items-center h-screen rounded">
+
+        <div class="overflow-y-auto w-9/12 h-4/6 mt-[200px]">
+            <div class="flex flex-col gap-10 overflow-scoll items-center" id="pai"></div>
+        </div>
+
+    </main>
+
+
+
+</body>
+
+</html>

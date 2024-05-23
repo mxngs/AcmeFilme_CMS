@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="../js/cadastro.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#15324D',
+                        retangulo1: '#344D64',
+                        retangulo2: '#2E3843'
+                    },
+                    spacing: {
+                        imgg: '450px',
+                        capa: '230px',
+                        card: "200px",
+                        body: '100vh'
+
+                    },
+                    zIndex: {
+                        img: '-1',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Adicionar Filme</title>
+</head>
+
+<body class="bg-gradient-to-b from-clifford w-[100%] h-screen bg-no-repeat z-[-1]">
+
+    <header class="flex justify-center">
+
+        <!-- adicionar filme -->
+        <div class="fixed top-[10px] font-extrabold text-[60px] drop-shadow-md">
+            <h1>Adicionar Filme</h1>
+        </div>
+
+        <!-- Botão para vpltar para tela anterior -->
+        <div class="fixed left-[50px] top-[40px]">
+            <a href="../telaCms/telaCms.html">
+                <img class="w-[30px]" src="../img/seta.png" alt="voltar">
+            </a>
+        </div>
+
+    </header>
+
+    <main class="flex justify-center pt-[90px]">
+
+        <!-- Retangulo desing -->
+        <div class=" fixed bg-clifford w-[600px] h-[770px] rounded-[18px] drop-shadow-md">
+
+        <!-- INPUT´S -->
+        <div class="fixed pt-[5px] pl-[50px] ">
+        <!-- INPUT que pega o nome do filme  -->
+        <div class="mb-1">
+            <label for="titulo" class=" block text-white font-bold mb-1">Título:</label>
+            <input type="text" id="titulo" name="titulo"
+                class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-[500px] py-2 px-3"
+                placeholder="Insira o título do filme">
+        </div>
+
+        <!-- INPUT que pega a sinopse do filme  -->
+        <div class="mb-1">
+            <label for="sinopse" class="block text-white font-bold mb-1">Sinopse:</label>
+            <textarea id="sinopse" name="sinopse"
+                class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full py-2 px-3"
+                placeholder="Insira a sinopse do filme"></textarea>
+        </div>
+
+        <!-- INPUT que pega o tempo do filme -->
+        <div class="mb-4">
+            <label for="duracao" class="block text-white font-bold mb-1">Tempo:</label>
+            <input type="text" id="duracao" name="duracao"
+                class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full py-2 px-3"
+                placeholder="Insira o tempo do filme">
+        </div>
+
+         <!-- INPUT que pega a data de lanaçamento do filme -->
+        <div class="mb-4">
+            <label for="data-lancamento" class="block text-white font-bold mb-1">Data de Lançamento:</label>
+            <input type="date" id="dataLancamento" name="dataLancamento"
+                class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full py-2 px-3">
+        </div>
+
+         <!-- INPUT que pega a data de relancamento do filme -->
+        <div class="mb-2">
+            <label for="data-relancamento" class=" text-white font-bold mb-1">Data de Relançamento:</label>
+            <input type="date" id="dataRelancamento" name="dataRelancamento"
+                class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full py-2 px-3">
+        </div>
+
+         <!-- INPUT que pega o valor do filme -->
+        <div class="mb-2">
+            <label for="valor" class="block text-white font-bold mb-1">Valor:</label>
+            <input type="text" id="valor" name="valor"
+                class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full py-2 px-3"
+                placeholder="Insira o valor do filme">
+        </div>
+
+        <!-- INPUT que pega o link da imagem do filme -->
+              <div class="mb-4">
+                <label for='poster' class="block text-white text-sm font-bold mb-1" for="image-link">
+                  Link da Imagem:
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="poster" name="poster" type="text" placeholder="Insira o link da imagem">
+              </div>
+
+        <!-- INPUT que recebe o genero do filme -->
+           <div class="mb-3"></div>
+              <label for='genero' class="block text-white text-sm font-bold mb-1" for="genero">
+                Gênero: 
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="genero" name="genero" type="text" placeholder="Insira o gênero do Filme">
+            </div>
+
+        <!-- INPUT que recebe o genero do filme -->
+             <div class="mb-3"></div>
+              <label for='classificacao' class="fixed text-white bottom-[90px] left-[50px] text-sm font-bold mb-1" for="classificacao">
+                Classificação:
+              </label>
+              <input class="fixed shadow appearance-none border rounded bottom-[50px] left-[50px] w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="classificacao" name="classificacao" type="text" placeholder="Insira a classificação do Filme">
+            </div>
+
+            
+
+            
+
+
+
+        
+        <!-- Botao de cadastrar filme -->
+              <div>
+                <button id="cadastrar" type="submit" class="fixed z-[1] bg-retangulo1  text-white left-[44%] bottom-[12px] py-[8px] px-[70px] rounded-[20px] hover:bg-retangulo2">Cadastrar</button>
+              </div>
+
+        </div>
+    </div>
+
+    
+        
+
+    </main>
+
+    <footer></footer>
+
+
+</body>
+
+</html>
