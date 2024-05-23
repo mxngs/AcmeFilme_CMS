@@ -33,8 +33,8 @@ cadastrar.addEventListener('click' , async() => {
         data_relancamento: dataRelancamentoInput,
         valor_unitario: valorInput,
         foto_capa: capaInput,
-        genero: generoInput,
-        classificacao: classificacaoInput
+        genero_id: generoInput,
+        classificacao_id: classificacaoInput
     }
 
     const teste = await postFilme(insert)

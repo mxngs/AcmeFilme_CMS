@@ -40,6 +40,6 @@ Níveis | Desempenho | Nota
 
 Protótipo | FRONT-END | Landing Page | CMS
 ----------|-----------|--------------|-----
-https://www.figma.com/design/YlQMEwUs2BEvvFFZ9lioOE/Untitled?node-id=89-8&t=RrFiHCRrbDonvtsP-0| 
+https://www.figma.com/design/fAo0GAotVTQbEWz8cbPM2K/Acme_Filmes?node-id=1-40&t=m0ZUMCSlNYKLCuMF-0|https://github.com/mxngs/AcmeFilme_Front||https://github.com/mxngs/AcmeFilme_CMS|
 
 # ACME-FRONT

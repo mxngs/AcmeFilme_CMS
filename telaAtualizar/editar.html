@@ -59,16 +59,16 @@
         <!-- INPUT´S -->
         <div class="fixed pt-[10px] pl-[50px] ">
         <!-- INPUT que pega o nome do filme  -->
-        <div class="mb-4">
-            <label for="titulo" class=" block text-white font-bold mb-2">Título:</label>
+        <div class="mb-1">
+            <label for="titulo" class=" block text-white font-bold mb-1">Título:</label>
             <input type="text" id="titulo" name="titulo"
                 class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-[500px] py-2 px-3"
                 placeholder="Insira o título do filme">
         </div>
 
         <!-- INPUT que pega a sinopse do filme  -->
-        <div class="mb-4">
-            <label for="sinopse" class="block text-white font-bold mb-2">Sinopse:</label>
+        <div class="mb-1">
+            <label for="sinopse" class="block text-white font-bold mb-1">Sinopse:</label>
             <textarea id="sinopse" name="sinopse"
                 class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full py-2 px-3"
                 placeholder="Insira a sinopse do filme"></textarea>
@@ -76,7 +76,7 @@
 
         <!-- INPUT que pega o tempo do filme -->
         <div class="mb-4">
-            <label for="duracao" class="block text-white font-bold mb-2">Tempo:</label>
+            <label for="duracao" class="block text-white font-bold mb-1">Tempo:</label>
             <input type="text" id="duracao" name="duracao"
                 class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full py-2 px-3"
                 placeholder="Insira o tempo do filme">
@@ -84,37 +84,62 @@
 
          <!-- INPUT que pega a data de lanaçamento do filme -->
         <div class="mb-4">
-            <label for="data-lancamento" class="block text-white font-bold mb-2">Data de Lançamento:</label>
+            <label for="data-lancamento" class="block text-white font-bold mb-1">Data de Lançamento:</label>
             <input type="date" id="dataLancamento" name="dataLancamento"
                 class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full py-2 px-3">
         </div>
 
          <!-- INPUT que pega a data de relancamento do filme -->
-        <div class="mb-4">
-            <label for="data-relancamento" class=" text-white font-bold mb-2">Data de Relançamento:</label>
+        <div class="mb-2">
+            <label for="data-relancamento" class=" text-white font-bold mb-1">Data de Relançamento:</label>
             <input type="date" id="dataRelancamento" name="dataRelancamento"
                 class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full py-2 px-3">
         </div>
 
          <!-- INPUT que pega o valor do filme -->
-        <div class="mb-4">
-            <label for="valor" class="block text-white font-bold mb-2">Valor:</label>
+        <div class="mb-2">
+            <label for="valor" class="block text-white font-bold mb-1">Valor:</label>
             <input type="text" id="valor" name="valor"
                 class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full py-2 px-3"
                 placeholder="Insira o valor do filme">
         </div>
 
-        <!-- INPUT que pega o lind da imagem do filme -->
+        <!-- INPUT que pega o link da imagem do filme -->
               <div class="mb-4">
-                <label for='poster' class="block text-white text-sm font-bold mb-2" for="image-link">
-                  Link da Imagem
+                <label for='poster' class="block text-white text-sm font-bold mb-1" for="image-link">
+                  Link da Imagem:
                 </label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="poster" name="poster" type="text" placeholder="Insira o link da imagem">
               </div>
+
+        <!-- SELECT que recebe a classificação do filme -->
+        <div class="mb-4 flex gap-[10px] ">
+            <p class="text-white font-bold " >Classificação:</p>
+            <select name="" class="" id="classificacao">
+                <option value="3">Livre</option>
+                <option value="4">10</option>
+                <option value="2">16</option>
+                <option value="6">14</option>
+                <option value="5">12</option>
+                <option value="7">18</option>
+            </select>
         
+            <!-- SELECT que recebe o genero do filme -->
+            <p class="text-white font-bold  " >Gênero:</p>
+            <select name="" class="outline-none" id="genero">
+                <option value="1">Terror</option>
+                <option value="4">Ação</option>
+                <option value="2">Suspense</option>
+                <option value="5">Comédia</option>
+                <option value="6">Drama</option>
+                <option value="7">Ficção científica</option>
+                <option value="8">Românce</option>
+            </select>
+        </div> 
+            
         <!-- Botao de Atualizar filme -->
               <div>
-                <button id="Atualizar" type="submit" class=" fixed bg-retangulo1 text-white py-[8px] px-[40px] rounded-[20px] hover:bg-retangulo2">Atualizar</button>
+                <button id="Atualizar" type="submit" class=" fixed bg-retangulo1 text-white left-[220px]  py-[8px] px-[40px] rounded-[20px] hover:bg-retangulo2">Atualizar</button>
               </div>
 
         </div>

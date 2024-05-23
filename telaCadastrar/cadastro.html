@@ -57,7 +57,7 @@
         <div class=" fixed bg-clifford w-[600px] h-[770px] rounded-[18px] drop-shadow-md">
 
         <!-- INPUT´S -->
-        <div class="fixed pt-[5px] pl-[50px] ">
+        <div class="fixed pt-[65px] pl-[50px] ">
         <!-- INPUT que pega o nome do filme  -->
         <div class="mb-1">
             <label for="titulo" class=" block text-white font-bold mb-1">Título:</label>
@@ -112,32 +112,34 @@
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="poster" name="poster" type="text" placeholder="Insira o link da imagem">
               </div>
 
-        <!-- INPUT que recebe o genero do filme -->
-           <div class="mb-3"></div>
-              <label for='genero' class="block text-white text-sm font-bold mb-1" for="genero">
-                Gênero: 
-              </label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="genero" name="genero" type="text" placeholder="Insira o gênero do Filme">
-            </div>
-
-        <!-- INPUT que recebe o genero do filme -->
-             <div class="mb-3"></div>
-              <label for='classificacao' class="fixed text-white bottom-[90px] left-[50px] text-sm font-bold mb-1" for="classificacao">
-                Classificação:
-              </label>
-              <input class="fixed shadow appearance-none border rounded bottom-[50px] left-[50px] w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="classificacao" name="classificacao" type="text" placeholder="Insira a classificação do Filme">
-            </div>
-
-            
-
-            
-
-
-
+        <!-- SELECT que recebe a classificação do filme -->
+        <div class=" flex gap-[10px] ">
+            <p class="text-white font-bold " >Classificação:</p>
+            <select name="" class="" id="classificacao">
+                <option value="3">Livre</option>
+                <option value="4">10</option>
+                <option value="2">16</option>
+                <option value="6">14</option>
+                <option value="5">12</option>
+                <option value="7">18</option>
+            </select>
         
+            <!-- SELECT que recebe o genero do filme -->
+            <p class="text-white font-bold  " >Gênero:</p>
+            <select name="" class="outline-none" id="genero">
+                <option value="1">Terror</option>
+                <option value="4">Ação</option>
+                <option value="2">Suspense</option>
+                <option value="5">Comédia</option>
+                <option value="6">Drama</option>
+                <option value="7">Ficção científica</option>
+                <option value="8">Românce</option>
+            </select>
+        </div> 
+            
         <!-- Botao de cadastrar filme -->
               <div>
-                <button id="cadastrar" type="submit" class="fixed z-[1] bg-retangulo1  text-white left-[44%] bottom-[12px] py-[8px] px-[70px] rounded-[20px] hover:bg-retangulo2">Cadastrar</button>
+                <button id="cadastrar" type="submit" class="fixed z-[1] bg-retangulo1  text-white left-[30%] bottom-[32px] py-[8px] px-[70px] rounded-[20px] hover:bg-retangulo2">Cadastrar</button>
               </div>
 
         </div>
