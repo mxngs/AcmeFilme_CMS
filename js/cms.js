@@ -7,12 +7,12 @@ function criarCard (filme){
     branco.classList.add( 'w-[800px]', 'h-[97px]', 'pt-[15px]' ,'drop-shadow-lg' , 'flex', 'justify-center' , 'bg-white', 'rounded-[20px]', 'drop-shadow-lg')
 
     const cinza = document.createElement('div')
-    cinza.classList.add( 'w-[766px]', 'row-auto' ,'h-[70px]', 'self-start' , 'fixed' , 'flex', 'items-stretch', 'font-bold' , 'pl-[10px]' , 'text-xl','drop-shadow-[0_35px_35px_rgba(0,0,0.20,0.50)]' , 'bg-[#D9D9D9]', 'rounded-[8px]')
+    cinza.classList.add( 'w-[766px]','h-[70px]', 'flex', 'justify-evenly', 'self-start' , 'fixed' , 'items-stretch', 'font-bold' , 'pl-[10px]' , 'text-xl','drop-shadow-[0_35px_35px_rgba(0,0,0.20,0.50)]' , 'bg-[#D9D9D9]', 'rounded-[8px]')
 
      const id = document.createElement('p')
      id.textContent = filme.id
 
-    const button = document.createElement('button')
+    // const button = document.createElement('button')
 
     const titulo = document.createElement('p')
     titulo.textContent = filme.nome
@@ -24,14 +24,15 @@ function criarCard (filme){
     iconeEditar.classList.add('bx', 'bx-edit-alt', 'cursor-pointer')
 
     const iconeExcluir = document.createElement('i')
-    iconeExcluir.classList.add('fixed','bx', 'bx-trash', 'cursor-pointer')
+    iconeExcluir.classList.add('bx', 'bx-trash', 'cursor-pointer')
 
     // icone.append(iconeEditar,iconeExcluir)
-    button.append(id, titulo, iconeEditar, iconeExcluir)
-    cinza.append(button)
+    cinza.append(id, titulo, iconeEditar, iconeExcluir)
+    // cinza.append(button)
     branco.append(cinza)
     
     iconeEditar.addEventListener('click',()=>{
+        localStorage.setItem('id', filme.id)
         window.location.href='../telaAtualizar/editar.html?id='+filme.id
     })
     

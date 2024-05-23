@@ -13,7 +13,7 @@ export async function getFilme(id){
     const url = `http://localhost:8080/v2/acmefilmes/filme/${id}`
     const response = await fetch(url)
     const data = await response.json()
-    return data.filmes[0]
+    return data.filme[0]
 }
 
 // export async function selectNameFilmes(nome){
@@ -40,7 +40,7 @@ export async function postFilme(filme){
 }
 
 export async function putFilme(id, filme){
-    const url = `http://localhost:8080/v2/filmesAcme/uptadeFilme/${id}`
+    const url = `http://localhost:8080/v2/acmefilmes/uptadeFilme/${id}`
     const options = {
         method: 'PUT',
         headers: {
@@ -50,6 +50,7 @@ export async function putFilme(id, filme){
     }
 
     const response = await fetch(url, options)
+
 
     return response.ok
 }

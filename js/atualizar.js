@@ -1,31 +1,35 @@
 'use strict'
-import { getFilmes, getFilmesId, postFilme, putFilme } from "./filmes.js";
-const id = new URLSearchParams(window.location.search).get('id');
+import { getFilmes, getFilme, postFilme, putFilme } from "./filmes.js";
+// const id = new URLSearchParams(window.location.search).get('id');
+const id = localStorage.getItem('id')
+console.log(id);
+
 
 // Definir elementos fora da função para garantir escopo global
-const nome = document.getElementById('nome');
+const nome = document.getElementById('titulo');
 const sinopse = document.getElementById('sinopse');
-const lancamento = document.getElementById('lancamento');
-const relancamento = document.getElementById('relancamento');
+const lancamento = document.getElementById('dataLancamento');
+const relancamento = document.getElementById('dataRelancamento');
 const duracao = document.getElementById('duracao');
 const valor = document.getElementById('valor');
 const poster = document.getElementById('poster');
 const classificacao = document.getElementById('classificacao');
-const link = document.getElementById('link');
-const salvar = document.getElementById('salvar');
+// const link = document.getElementById('poster');
+const salvar = document.getElementById('Atualizar');
 
 // Função para puxar os dados do filme pelo ID
 async function dadosFilme() {
     if (id) {
         try {
-            const infoFilme = await getFilmesId(id);
+            const infoFilme = await getFilme(id);
+            console.log(infoFilme.nome)
 
             // Atribuir valores aos elementos do formulário
             nome.value = infoFilme.nome || '';
             sinopse.textContent = infoFilme.sinopse || '';
             duracao.value = tratarDuracao(infoFilme.duracao) || '';
             classificacao.value = infoFilme.id_classificacao || '';
-            poster.src = infoFilme.foto_capa || '';
+            poster.value = infoFilme.foto_capa || '';
             valor.value = infoFilme.valor_unitario || '';
             lancamento.value = infoFilme.data_lancamento ? infoFilme.data_lancamento.slice(0, 10) : '';
             relancamento.value = infoFilme.data_relancamento ? infoFilme.data_relancamento.slice(0, 10) : '';
@@ -43,9 +47,9 @@ function tratarDuracao(string) {
 }
 
 // Mudar capa do filme
-link.addEventListener('keyup', () => {
-    poster.src = link.value;
-});
+// link.addEventListener('keyup', () => {
+//     poster.src = link.value;
+// });
 
 // Botão de salvar alterações
 salvar.addEventListener('click', async () => {
@@ -56,7 +60,7 @@ salvar.addEventListener('click', async () => {
         const dataLancamentoInput = lancamento.value;
         const dataRelancamentoInput = relancamento.value;
         const precoInput = valor.value;
-        const fotoCapaInput = poster.src;
+        const fotoCapaInput = poster.value;
         const classificacaoInput = classificacao.value;
 
         const alteracoes = {
@@ -67,15 +71,16 @@ salvar.addEventListener('click', async () => {
             data_relancamento: dataRelancamentoInput,
             valor_unitario: precoInput,
             foto_capa: fotoCapaInput,
-            id_classificacao: classificacaoInput
+            classificacao_id: classificacaoInput
         };
 
         console.log('Alterações a serem enviadas:', alteracoes);
 
         const resultado = await putFilme(id, alteracoes);
+        console.log(resultado);
 
         if (resultado) {
-            window.location.href = './dashboard.html';
+            window.location.href = '../telaCms/telaCms.html';
         } else {
             console.error('Erro ao salvar as alterações');
         }
